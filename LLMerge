@@ -14,16 +14,16 @@ public class LLReverse {
 		
 	}
 	
-	public static Node reverseList(Node first,Node second){
+	public static Node mergeList(Node first,Node second){
 		Node result=null;
 		if(first==null) return second;
 		else if(second==null) return first;
 		if(first.data<=second.data){
 			result=first;
-			result.next=reverseList(first.next, second);
+			result.next=mergeList(first.next, second);
 		}else{
 			result=second;
-			result.next=reverseList(first, second.next);
+			result.next=mergeList(first, second.next);
 		}
 		return result;
 	}
