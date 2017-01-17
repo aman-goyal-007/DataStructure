@@ -1,8 +1,12 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 
 public class BSTTreeAllOperations {
 
 	public static void main(String...args){
-		Node root=new Node(4, null, null);
+/*		//Testing add and remove
+ 		Node root=new Node(4, null, null);
 		add(root,2);
 		add(root,6);
 		add(root,3);
@@ -10,18 +14,29 @@ public class BSTTreeAllOperations {
 		add(root,5);
 		System.out.println("\nPrinting Inorder");
 		inOrder(root);
-		delete(root, 6);
+*//*		delete(root, 6);
 		System.out.println("\nPrinting Inorder");
 		inOrder(root);
+*/		
+
 		
-		
-/*		System.out.println("\nPrinting Preorder");
+/*	//Testing Preorder, postorder
+ 	System.out.println("\nPrinting Preorder");
 		preOrder(root);
 		System.out.println("\nPrinting Postorder");
 		postOrder(root);
 */		
 		
-		
+/*		//Testing BFS
+		Node root=new Node(5, null, null);
+		add(root,10);
+		add(root,15);
+		add(root,20);
+		add(root,25);
+		add(root,30);
+		add(root,35);
+		printBFS(root);
+*/		
 		
 	}
 	
@@ -107,7 +122,27 @@ public class BSTTreeAllOperations {
 		System.out.print(root.value+":");
 			
 	}
+	
+	
+	static void printBFS(Node root){
+		Queue<Node> queue = new LinkedList<>();
+		Node currentNode = null;
+		if(root==null) return;
+		queue.add(root);
+		while(!queue.isEmpty()){
+			currentNode=queue.remove();
+			System.out.println(currentNode.value);
+			if(currentNode.left!=null)
+				queue.add(currentNode.left);
+			if(currentNode.right!=null)
+				queue.add(currentNode.right);
+		}
+	}
+	
 }
+
+	
+
 class Node{
 	int value;
 	Node left;
