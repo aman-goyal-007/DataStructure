@@ -1,0 +1,60 @@
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class TrieTest {
+
+	public static void main(String...args){
+		Trie root = new Trie();
+		addWord("EMPTY", root);
+		addWord("ENEMY", root);
+		addWord("EMINUM", root);
+		
+		
+		
+		System.out.println(wordsStartWith("EM", root));
+		
+		
+	}
+	
+	
+	static void addWord(String word,Trie root){
+		HashMap<Character, Trie> children = root.map;
+		int index=0;
+		while(index<word.length()){
+			char c = word.charAt(index++);
+			Trie t;
+			if(!children.containsKey(c)){
+				t = new Trie(c);
+				children.put(c, t);
+			}
+			else {
+				t = children.get(c);
+			}
+			children=t.map;
+			if(index==(word.length()-1)) t.leaf=true;
+		}
+	}
+	
+	
+	static boolean wordsStartWith(String stStr,Trie root){
+		HashMap<Character, Trie> children=root.map;
+		int index=0;
+		boolean found=true;
+		while(index<stStr.length()){
+			char c = stStr.charAt(index++);
+			if(!children.containsKey(c))
+				return false;
+			children=children.get(c).map;
+		}
+		return true;
+	}
+}
+
+
+class Trie{
+	char c;
+	HashMap<Character, Trie> map = new HashMap<>();
+	boolean leaf;
+	Trie(){}
+	Trie(char c){this.c=c;}
+}
