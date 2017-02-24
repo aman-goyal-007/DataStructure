@@ -1,8 +1,8 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-
-public class BSTTreeAllOperations {
+//BST All Operations
+public class BST {
 
 	public static void main(String...args){
 /*		//Testing add and remove
