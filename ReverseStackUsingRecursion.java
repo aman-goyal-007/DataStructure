@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Temp
+public class ReverseStackUsingRecursion
 {
     public static void main(String [] args) 
     {

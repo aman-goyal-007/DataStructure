@@ -9,9 +9,8 @@ Input: arr[] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9}
 Output: 3 (1-> 3 -> 8 ->9)
 
 */
-
-
-static int minJumps(int arr[], int n) // n is array size
+public class MinimumJumps{
+	static int minJumps(int arr[], int n) // n is array size
 	{
 	    int[] jumps = new int[n];  
 	    
@@ -34,4 +33,7 @@ static int minJumps(int arr[], int n) // n is array size
 	    }
 	    
 	    return jumps[n-1];
-	}
+	}	
+}
+
+

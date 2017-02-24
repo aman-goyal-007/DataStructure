@@ -3,7 +3,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 //Given an array A[] and a number x, check for pair in A[] with sum as x
-public class Test {
+public class SumofPairInArray {
 	
     public static void main (String[] args)
     {
