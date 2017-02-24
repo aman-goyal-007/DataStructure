@@ -1,10 +1,10 @@
-//MyClass
+
 public class LLReverse {
 
 	public static void main(String...args){
-		Node head = new Node(1, new Node(2,new Node(3,new Node(4,null))));
+		MyNode head = new MyNode(1, new MyNode(2,new MyNode(3,new MyNode(4,null))));
 		
-		Node current,previous,next;
+		MyNode current,previous,next;
 		current=head;
 		previous=null;
 		next=null;
@@ -15,7 +15,7 @@ public class LLReverse {
 			current=next;
 		}
 		head=previous;
-		Node temp=head;
+		MyNode temp=head;
 		while(true){
 			System.out.println(temp.data);
 			if(temp.next==null) break;
@@ -25,10 +25,12 @@ public class LLReverse {
 		
 	}
 }
-class Node{
+
+
+class MyNode{
 	int data;
-	Node next;
-	Node(int data,Node next){
+	MyNode next;
+	MyNode(int data,MyNode next){
 		this.data=data;
 		this.next=next;
 	}

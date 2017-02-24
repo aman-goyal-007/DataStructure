@@ -2,9 +2,9 @@
 public class LLMerge {
 
 	public static void main(String...args){
-		Node first = new Node(1, new Node(6,new Node(8,new Node(9,null))));
-		Node second = new Node(2, new Node(4,new Node(7,null)));
-		Node temp=mergeList(first, second);
+		MyLLNode first = new MyLLNode(1, new MyLLNode(6,new MyLLNode(8,new MyLLNode(9,null))));
+		MyLLNode second = new MyLLNode(2, new MyLLNode(4,new MyLLNode(7,null)));
+		MyLLNode temp=mergeList(first, second);
 		while(true){
 			System.out.println(temp.data);
 			if(temp.next==null) break;
@@ -14,8 +14,8 @@ public class LLMerge {
 		
 	}
 	
-	public static Node mergeList(Node first,Node second){
-		Node result=null;
+	public static MyLLNode mergeList(MyLLNode first,MyLLNode second){
+		MyLLNode result=null;
 		if(first==null) return second;
 		else if(second==null) return first;
 		if(first.data<=second.data){
@@ -28,10 +28,10 @@ public class LLMerge {
 		return result;
 	}
 }
-class Node{
+class MyLLNode{
 	int data;
-	Node next;
-	Node(int data,Node next){
+	MyLLNode next;
+	MyLLNode(int data,MyLLNode next){
 		this.data=data;
 		this.next=next;
 	}
