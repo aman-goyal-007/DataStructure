@@ -5,19 +5,17 @@ import java.util.Queue;
 public class BST {
 
 	public static void main(String...args){
-/*		//Testing add and remove
+		//Testing add and remove
  		Node root=new Node(4, null, null);
-		add(root,2);
-		add(root,6);
-		add(root,3);
 		add(root,7);
-		add(root,5);
+		add(root,4);
+		add(root,8);
 		System.out.println("\nPrinting Inorder");
 		inOrder(root);
-*//*		delete(root, 6);
+//*		delete(root, 6);
 		System.out.println("\nPrinting Inorder");
 		inOrder(root);
-*/		
+		
 
 		
 /*	//Testing Preorder, postorder
