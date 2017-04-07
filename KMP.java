@@ -70,13 +70,13 @@ public class KMP
         String pattern = br.readLine();
         KMP kmp = new KMP(text, pattern);        
 */
-        System.out.println("Knuth Morris Pratt Test\n");
+/*        System.out.println("Knuth Morris Pratt Test\n");
         System.out.println("\nEnter Text\n");
-        String text = "HelloHlHetaaa";
-        System.out.println("\nEnter Pattern\n");
-        String pattern = "aabaacaabaa";
-//        KMP kmp = new KMP(text, pattern);        
-        calculatelps(pattern);
+*/      String text = "aaabca";
+ //       System.out.println("\nEnter Pattern\n");
+        String pattern = "abc";
+        KMP kmp = new KMP(text, pattern);        
+//        calculatelps(pattern);
     }
     
     
