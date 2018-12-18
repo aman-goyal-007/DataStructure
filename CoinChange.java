@@ -45,6 +45,28 @@ public class CoinChange {
 		}
 		
 	}
+//bottom up tabulation approach
+    /*
+    In this approach we are using table of previous solution.
 
+1
+2	4
+3							0	1	2	3	4
+							1	1	1	1	1
+							1	1	2	2	3
+							1	1	2	3	4
+     */
+    public static void howManyWays(int[] denomination, int total){
+        int table[] = new int[total+1];
+        table[0] = 1;
+        for(int i=0;i<denomination.length;i++){
+            for(int j=denomination[i];j<=total;j++){
+                table[j] += table[j-denomination[i]];
+            }
+            for(int a=0;a<table.length;a++) System.out.print(table[a]+" ");
+            System.out.println("aman");
+        }
+        System.out.println(table[total]);
+    }
 	
 }
